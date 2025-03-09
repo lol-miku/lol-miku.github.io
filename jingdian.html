@@ -1,0 +1,252 @@
+<!-- 红色景点页面 (jingdian.html) -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>红色景点 - 琼海红色文化网</title>
+    <style>
+        /* 基础样式 */
+         * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        } 
+
+        /* body {
+            font-family: "Microsoft YaHei", sans-serif;
+            background: #fff9f9;
+            line-height: 1.6;
+        } */
+
+        /* 主容器 */
+        .container {
+            
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+
+        /* 视频展示区 */
+        .video-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        /* 视频卡片 */
+        .video-card {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(194, 24, 24, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* 视频容器 */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 比例 */
+            height: 0;
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* 简介样式 */
+        .video-info {
+            padding: 1.5rem;
+            background: linear-gradient(to right, #ffeded, #ffe6e6);
+        }
+
+        .video-title {
+            color: #c00;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid #c00;
+            padding-left: 1rem;
+        }
+
+        .video-description {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .video-gallery {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 0 10px;
+            }
+            
+            .video-title {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="style.css"> 
+
+</head>
+<body>
+    <nav>
+        <h4>红棉文化</h4>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="geming.html">革命历史</a></li>
+            <li><a href="jingdian.html" class="active">红色景点</a></li>
+            <li><a href="wenchuang.html">文创</a></li>
+            <li><a href="chenjinshi.html">沉浸式体验</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="video-gallery">
+            <!-- 第一个视频 -->
+            <div class="video-card">
+                <div class="video-container">
+                    <video controls poster="网页所用图片/微信图片_20250308161445.png">
+                        <source src="网页所用图片/c3c108f7953162060380cfbd3504c402.mp4" type="video/mp4">
+                        您的浏览器不支持视频播放
+                    </video>
+                </div>
+                <div class="video-info">
+                    <h2 class="video-title">椰子寨战斗遗址</h2>
+                    <p class="video-description">
+                        椰子寨位于琼海市嘉积城区西南方向 10 公里，水陆交通便利，地处
+万泉河南岸、白石岭北麓，依山傍水、地势险要，既是嘉积的西南屏障，
+也是乐会县第四区（简称乐四区，今琼海市阳江镇一带）和定安县第七区
+（今琼海市万泉镇文曲一带）之间的交通咽喉和贸易集散地。
+1927 年 9 月 23 日，一场载入史册的战斗在椰子寨墟打响。中共琼崖
+特委领导的琼崖讨逆革命军强渡万泉河、攻占椰子寨、拔除敌炮楼，掀开
+了全琼武装总暴动的序幕。
+以椰子寨战斗为历史起点，琼崖人民在中国共产党的领导下，开启了
+"孤岛奋战、艰苦卓绝，二十三年红旗不倒"的壮丽历程。
+                    </p >
+                </div>
+            </div>
+
+            <!-- 第二个视频 -->
+            <div class="video-card">
+                <div class="video-container">
+                    <video controls poster="网页所用图片/微信图片_20250308161504.jpg">
+                        <source src="网页所用图片/0d6ae15e50b20191e8584acaeed40306.mp4" type="video/mp4">
+                        您的浏览器不支持视频播放
+                    </video>
+                </div>
+                <div class="video-info">
+                    <h2 class="video-title">红色娘子军纪念馆</h2>
+                    <p class="video-description">
+                        在 20 世纪 20 年代末 30 年代初的土地革命高潮中，觉醒的琼崖妇女
+革命性空前高涨，强烈要求参军参战。1931 年 5 月 1 日，一支成建制的
+女兵战斗连队﹣﹣中国工农红军第二独立师第三团女子军特务连在乐会
+县第四区诞生。她们在中共琼崖特委的领导下，出色地完成了保卫红军
+师部和琼崖苏维埃政府领导机关、宣传发动群众等任务，并配合红军主
+力部队作战，在伏击沙帽岭、火攻文市炮楼、拔除阳江据点及马鞍岭阻
+击战等战斗中，不怕牺牲，英勇杀敌，为琼崖革命立下了不朽功勋，在
+中国革命史上留下最富有传奇色彩的战斗经历。
+                    </p >
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="container">
+        <section class="attractions-gallery">
+            <h1 class="section-title">琼海红色教育基地</h1>
+            <div class="gallery-grid">
+                <!-- 红色娘子军纪念园 
+                <div class="spot-card">
+                    <div class="card-image">
+                        <video class="video-container" autoplay loop muted playsinline preload="metadata">
+                            <source src="网页所用图片/0d6ae15e50b20191e8584acaeed40306.mp4" type="video/mp4">
+                            <source src="mazu.webm" type="video/webm">
+                            <!-- 备用内容 
+                            <img src="mazu-poster.jpg" alt="红色娘子军纪念园" style="width:100%">
+                        </video>
+                    </div>
+                    <div class="card-content">
+                        <h3>红色娘子军纪念园</h3>
+                        <div class="card-scroll">
+                            <!-- 文本内容保持不变 
+                        </div>
+                        <a href="#" class="detail-btn">了解更多 →</a>
+                    </div>
+                    
+                </div>
+
+                <!-- 椰子寨战斗遗址 
+                <div class="spot-card">
+                    <div class="spot-card">
+                        <div class="card-image">
+                            <video class="video-container" autoplay loop muted playsinline preload="metadata">
+                                <source src="网页所用图片/c3c108f7953162060380cfbd3504c402.mp4" type="video/mp4">
+                                <source src="yezizhai.webm" type="video/webm">
+                                <img src="yezizhai-poster.jpg" alt="椰子寨战斗遗址" style="width:100%">
+                            </video>
+                        </div>
+                        <div class="card-content">
+                            <!-- 内容保持不变 
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>椰子寨战斗遗址</h3>
+                        <div class="card-scroll">
+                            <!-- 文本内容保持不变 
+                        </div>
+                        <a href="#" class="detail-btn">了解更多 →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div> -->
+    <footer>
+        
+        <p>联系我们：0898-1234 5678 <br></br> Email:hongmiongyazhou@culture.com</p>
+        <br></br>
+        <p>关于琼海： 红色热土，非遗瑰宝
+            椰风海韵，非遗振兴
+        </p>
+        <br></br>
+        <p>Copyright&copy; 2025 红棉文化. 保留所有权利.</p>
+        
+    </footer>
+<script>
+    // 精确路径匹配函数
+    function isCurrentPage(link) {
+        const currentPath = window.location.pathname.toLowerCase();
+        const linkPath = link.getAttribute('href').trim().toLowerCase();
+    
+        // 处理首页特殊路径
+        if (linkPath === ' ' || linkPath === 'index.html') {
+            return currentPath.endsWith('/') || 
+                   currentPath.includes('index.html') || 
+                   currentPath === '';
+        }
+    
+        return currentPath.includes(linkPath);
+    }
+    
+    // 清除旧状态并设置新状态
+    document.querySelectorAll('nav a').forEach(link => {
+        link.classList.remove('active'); // 先移除所有激活状态
+        
+        if (isCurrentPage(link)) {
+            link.classList.add('active');
+        }
+    });
+    </script>
+</body>
+</html>

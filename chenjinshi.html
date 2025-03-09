@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>沉浸体验 - 琼海红色文化网</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 定制沉浸式页面样式 */
+        :root {
+            --theme-red: #c62828;
+            --theme-beige: #fff5e6;
+        }
+
+        /* 互动任务模块 */
+        .mission-section {
+            background: var(--theme-beige);
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .mission-section::before {
+            content: "✧ 革命传承 ✧";
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--theme-red);
+            color: white;
+            padding: 0.5rem 2rem;
+            border-radius: 30px;
+            font-size: 0.9em;
+        }
+
+        /* 打卡手环效果 */
+        .wristband {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .wristband::after {
+            content: "";
+            flex: 1;
+            height: 4px;
+            background: repeating-linear-gradient(
+                90deg,
+                var(--theme-red) 0 10px,
+                transparent 10px 20px
+            );
+        }
+        .wristband-icon {
+            width: 60px;
+            height: 60px;
+            background: url('wristband-icon.png') no-repeat center;
+            background-size: contain;
+            filter: drop-shadow(0 2px 4px rgba(198,40,40,0.3));
+        }
+
+        /* 任务流程图 */
+        .mission-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+        .step-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .step-card:hover {
+            transform: translateY(-5px);
+        }
+        .step-icon {
+            font-size: 2.5rem;
+            color: var(--theme-red);
+            margin-bottom: 1rem;
+        }
+
+        /* VR增强模块 */
+        .vr-enhanced {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                        url(" ") center/cover;
+            color: white;
+            padding: 4rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .vr-features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .vr-feature {
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(5px);
+            border-radius: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .vr-features {
+                grid-template-columns: 1fr;
+            }
+            .mission-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <nav>
+            <h4 id="nav-title">红棉文化</h4>
+            <ul>
+                <li><a href = "index.html" class="active">首页</a></li>
+                <li><a href = "geming.html">革命历史</a></li>
+                <li><a href="jingdian.html">红色景点</a></li>
+                <li><a href="wenchuang.html">文创</a></li>
+                <li><a href="chenjinshi.html">沉浸式体验</a></li>
+            </ul>
+        </nav>
+    </nav>
+
+    <div class="container">
+        <!-- RPG互动模块 -->
+        <section class="mission-section">
+            <h1 class="section-title">RPG真人互动体验</h1>
+            <div class="wristband">
+                <div class="wristband-icon"></div>
+                <h3>历史解码器手环</h3>
+            </div>
+            
+            <div class="mission-steps">
+                <div class="step-card">
+                    <div class="step-icon">📍</div>
+                    <h3>遗址打卡</h3>
+                    <p>在红色娘子军纪念馆、狮子寨战斗遗址等7个地点完成打卡</p >
+                </div>
+                <div class="step-card">
+                    <div class="step-icon">🎭</div>
+                    <h3>NPC互动</h3>
+                    <p>与历史人物NPC对话获取任务线索</p >
+                </div>
+                <div class="step-card">
+                    <div class="step-icon">🏅</div>
+                    <h3>收集印章</h3>
+                    <p>完成指定任务获取革命主题纪念印章</p >
+                </div>
+                <div class="step-card">
+                    <div class="step-icon">🎁</div>
+                    <h3>解锁奖励</h3>
+                    <p>集齐印章兑换限量版革命文创礼品</p >
+                </div>
+            </div>
+        </section>
+        <section class="vr-enhanced">
+            <h2>VR穿越硝烟重返历史</h2>
+            <p class="subtitle">身临其境体验革命战场，感受真实历史场景</p >
+            
+            <div class="vr-features">
+                <div class="vr-feature">
+                    <h3>全景重现</h3>
+                    <p>1:1还原梅子寨战斗场景</p >
+                </div>
+                <div class="vr-feature">
+                    <h3>AR增强</h3>
+                    <p>扫描实物触发隐藏历史影像</p >
+                </div>
+                <div class="vr-feature">
+                    <h3>文化联动</h3>
+                    <p>战场线索与非遗积分系统互通</p >
+                </div>
+            </div>
+
+            <div class="vr-container" style="margin-top:2rem">
+                <article class="VR">
+                    <img src="网页所用图片/2207E0B6B946DBEA1D784856C0093CA8.jpg" alt="沉浸式VR" class="card1-image">
+                    <div class="card-content">
+                        <h2 class="card1-title"></h2>
+                    </div>
+                </article>
+            </div>
+            <div class="VR-Introduction">
+                <h2>RPG真人互动</h2>
+                <p>     戴上“历史解码器”打卡手环，开
+                    启一场穿越时空的革命之旅！</p>
+                <p>在红色娘子军纪念馆与椰子寨战斗遗址中，分布着多个集章打卡点。</p>
+                <p>找到打卡点后，与NPC 互动完成任务，即可获得纪念印章。集齐七枚</p>
+                <p>印章，还能解锁额外纪念品奖励！互动中，还可体验 VR/AR技术通过</p>
+                <p>手环，战场线索挖掘与非遗传习积分互通，让历史与非遗文化完美联动，</p>
+                <p>带给你沉浸式的红色文化体验！</p>
+                    
+            </div>
+        </section>
+    </div>
+    <footer>
+        
+        <p>联系我们：0898-1234 5678 <br></br> Email:hongmiongyazhou@culture.com</p>
+        <br></br>
+        <p>关于琼海： 红色热土，非遗瑰宝
+            椰风海韵，非遗振兴
+        </p>
+        <br></br>
+        <p>Copyright&copy; 2025 红棉文化. 保留所有权利.</p>
+        
+    </footer>
+<script>
+    // 精确路径匹配函数
+    function isCurrentPage(link) {
+        const currentPath = window.location.pathname.toLowerCase();
+        const linkPath = link.getAttribute('href').trim().toLowerCase();
+    
+        // 处理首页特殊路径
+        if (linkPath === ' ' || linkPath === 'index.html') {
+            return currentPath.endsWith('/') || 
+                   currentPath.includes('index.html') || 
+                   currentPath === '';
+        }
+    
+        return currentPath.includes(linkPath);
+    }
+    
+    // 清除旧状态并设置新状态
+    document.querySelectorAll('nav a').forEach(link => {
+        link.classList.remove('active'); // 先移除所有激活状态
+        
+        if (isCurrentPage(link)) {
+            link.classList.add('active');
+        }
+    });
+    </script>
+</body>
+</html>

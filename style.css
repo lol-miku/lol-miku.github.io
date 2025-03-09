@@ -1,0 +1,528 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Microsoft YaHei", sans-serif;
+}
+
+/* 导航栏 */
+nav {
+
+    background: #a44128eb;
+    position:fixed;
+    top:0;
+    z-index: 10;
+    height: 62px;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    
+}
+
+h4{
+    background-image: url(网页所用图片/BB32CED7-E524-497A-9CE7-8E9C205A7541.png);
+    /* color:inherit; */
+    background-size: 17%; /* 将背景图像缩小至容器宽度的 50% */
+    background-repeat: no-repeat; 
+    background-position: left; /* 将背景图像定位到左边 */  
+    line-height: 55px;  
+    text-indent: -9999px;
+    margin: 0; /* 去掉默认的外边距 */  
+    padding: 25px;
+    margin-left: 80px;
+
+}
+nav li{
+    
+    display: inline;
+    margin-right: 5vw;
+}
+
+nav ul {
+    position: absolute;
+    right: 20vw;
+    top: 0;
+    line-height: 60px;
+    backdrop-filter: blur(10px);
+}
+nav a.active {
+    color: #090909 !important; /* 使用金色作为激活色 */
+    border-bottom: 2px solid currentColor;
+    padding-bottom: 3px;
+}
+
+nav a {
+    /* 在全局样式表中添加 */
+
+    color: inherit;        
+    text-decoration: none;
+
+  
+  /* 单独定义导航栏颜色 */
+ 
+    color: #e2d5ce; 
+    font-weight: bold;
+
+    font-weight: 900;  /* 最大加粗 */
+    font-size: 1.2em;
+    
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 900;
+   
+}
+nav a:hover{
+    /* text-decoration:underline; */
+    background-color: #d32f2f;
+}
+
+/* 主要内容容器 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* 简介板块 */
+.intro-section {
+    background: #fff3e0;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+/* 红色景点卡片 */
+.attraction-card {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* 沉浸式体验板块 */
+.immersive-section {
+    background: #f8f9fa;
+    padding: 2rem;
+    text-align: center;
+}
+
+.cta-button {
+    background: #d32f2f;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+/* 页脚 */
+/* footer {
+    background: #212121;
+    color: white;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+} */
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .attraction-card {
+        grid-template-columns: 1fr;
+    }
+    footer {
+        grid-template-columns: 1fr;
+    }
+}
+/* 时间线样式 */
+.history-timeline {
+    padding: 2rem;
+    background: #f5f5f5;
+}
+.timeline-item {
+    border-left: 3px solid #d32f2f;
+    padding-left: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* 景点网格布局 */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+.spot-card {
+    transition: transform 0.3s;
+}
+.spot-card:hover {
+    transform: translateY(-5px);
+}
+
+/* 商品卡片 */
+/* .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.buy-btn {
+    background: #d32f2f;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+} */
+
+/* VR体验区 */
+.vr-container {
+    aspect-ratio: 16/9;
+    background: #000;
+}
+.vr-viewer {
+    width: 100%;
+    height: 100%;
+}
+:root {
+    --main-red: #c62828;
+    --hover-bg: rgba(255,255,255,0.1);
+}
+/* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Microsoft YaHei", sans-serif;
+} */
+
+/* 导航栏 */
+/* .navbar {
+    background: #c62828; /* 深红色背景 */
+/*    padding: 1.2rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 10;
+    top:0;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    list-style: none;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s;
+    border-radius: 4px;
+}
+
+.nav-links a:hover {
+    background: rgba(255,255,255,0.1);
+} */
+
+/* 内容容器 */
+.main-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* 特色板块网格 */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* 内容卡片 */
+.feature-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid #c62828;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-title {
+    color: #c62828;
+    margin-bottom: 1rem;
+}
+
+.card1-image {
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    border-bottom: 3px solid #a09797;
+    z-index: 1;
+    top: 80px;
+
+}
+.qionghai {
+    background: rgb(176, 207, 222);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    
+}
+.qionghai:hover {
+    transform: translateY(-5px);
+}
+body{
+    /* background-color: rgb(75, 80, 80); */
+    background-color: #746666d2;
+    top: 80px;
+    margin-top: -20px;
+    
+}
+
+
+
+
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* 改进后的CSS */
+
+.hero-banner {  
+    margin-top: 10px;  
+}  
+
+.hero-banner img {  
+    width: 100%; /* 宽度占满 */  
+    height: auto; /* 高度自适应 */  
+}  
+
+.container {  
+    padding: 20px;  
+    padding-top: 120px;
+}  
+
+.products-showcase {  
+    text-align: center;  
+}  
+
+.product-grid {  
+    display: grid; /* 使用网格布局 */  
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* 自动适应列数 */  
+    gap: 20px; /* 每个商品之间的间距 */  
+}  
+
+.product-card {  
+    border: 1px solid #ddd; /* 边框 */  
+    border-radius: 8px; /* 圆角 */  
+    overflow: hidden; /* 去掉溢出的内容 */  
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 阴影效果 */  
+    transition: transform 0.2s; /* 动画效果 */  
+}  
+
+.product-card:hover {  
+    transform: scale(1.05); /* 悬停放大效果 */  
+}  
+
+.product-card img {  
+    width: 100%; /* 图片宽度占满 */  
+    height: auto; /* 高度自适应 */  
+}  
+
+.product-card h3 {  
+    font-size: 18px;  
+    margin: 10px 0;  
+}  
+
+.buy-btn {  
+    background-color: #27ae60; /* 按钮颜色 */  
+    color: white;  
+    border: none;  
+    padding: 10px 15px;  
+    border-radius: 5px;  
+    cursor: pointer;  
+}  
+
+.buy-btn:hover {  
+    background-color: #219150; /* 悬停时按钮颜色 */  
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto; /* 新增居中 */
+    padding: 20px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    display: flex; /* 新增flex布局 */
+    flex-direction: column; /* 垂直排列 */
+    min-height: 380px; /* 固定最小高度 */
+    transition: transform 0.3s ease;
+    align-items: center; 
+}
+
+.card-content {
+    flex: 1; /* 内容区自动填充 */
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px; /* 固定图片高度 */
+    object-fit: cover; /* 保持图片比例 */
+    border-radius: 4px;
+}
+
+.product-card h3 {
+    margin: 15px 0;
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.4;
+    flex-grow: 1; /* 标题区域自动扩展 */
+}
+
+.button-container {
+    margin-top:auto; /* 按钮推到容器底部 */
+    padding: 20px 20px 0;
+    text-align: center;
+    align-self: center; 
+}
+
+.buy-btn {
+    background: #c0392b;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width:max-content; /* 统一按钮宽度 */
+    max-width: 200px; /* 最大宽度限制 */
+    margin-bottom: 15px;
+    margin-top: auto;
+}
+
+.buy-btn:hover {
+    background: #a93226;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 新增居中保障 */
+.container {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.products-showcase {
+    width: 100%;
+    max-width: 1200px;
+}
+/* 红色景点页面专用样式 */
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .card-image {
+        height: 200px;
+    }
+    
+    .card-scroll {
+        height: 150px;
+    }
+}
+/* 在style.css中补充以下样式 */
+/* 基础增强 */
+.section-title {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 2.2em;
+    color: var(--theme-red);
+    position: relative;
+    padding-bottom: 1rem;
+}
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--theme-red);
+}
+
+.subtitle {
+    font-size: 1.1em;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+/* 响应式调整 */
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.8em;
+    }
+    .wristband h3 {
+        font-size: 1.1em;
+    }
+}
+
+footer {  
+    text-align: center;  
+    padding: 20px;  
+    background-color:  #a44128eb; /* 红色主题 */  
+    color: white;  
+    position: relative; /* 页脚位置 */  
+} 
