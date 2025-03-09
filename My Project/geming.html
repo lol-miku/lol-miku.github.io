@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>革命历史 - 琼海红色文化网</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 自定义时间线样式 */
+        :root {
+            --primary-red: #c62828;
+            --secondary-red: #ffebee;
+        }
+
+        .history-intro {
+            background: var(--secondary-red);
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem auto;
+            line-height: 1.8;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .history-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 3rem auto;
+            padding-left: 40px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2.5rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -32px;
+            top: 24px;
+            width: 20px;
+            height: 20px;
+            background: var(--primary-red);
+            border-radius: 50%;
+            border: 4px solid white;
+        }
+
+        .history-timeline::before {
+            content: '';
+            position: absolute;
+            left: -22px;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: var(--primary-red);
+        }
+
+        .timeline-item h3 {
+            color: var(--primary-red);
+            margin-bottom: 0.8rem;
+            font-size: 1.2em;
+        }
+
+        .timeline-item p {
+            color: #555;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 768px) {
+            .history-timeline {
+                padding-left: 20px;
+            }
+            .timeline-item::before {
+                left: -26px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h4>红棉文化</h4>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="geming.html">革命历史</a></li>
+            <li><a href="jingdian.html" class="active">红色景点</a></li>
+            <li><a href="wenchuang.html">文创</a></li>
+            <li><a href="chenjinshi.html">沉浸式体验</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section class="history-intro">
+            <h2>琼海革命历史简介</h2>
+            <img src="网页所用图片/F8705B50F065558EDC209AF58C0CA826.jpg" alt="新民路" class="card-image">
+            
+            <br></br>
+            <p>&nbsp;&nbsp;琼海革命历史是海南岛革命斗争的重要篇章。自1927年梅子寨战斗打响琼崖革命第一枪，琼海人民在革命先驱带领下，历经23年艰苦卓绝的斗争，书写了“孤岛奋战、红旗不倒”的壮丽史诗。</p >
+                <br></br>   
+            <img src="网页所用图片/C8707125C8DABF548C012531EBB3EAEE.jpg" alt="新民路" class="card-image">
+            <br></br>
+            <p>&nbsp;&nbsp;抗日战争时期，琼崖纵队以琼海作为重要根据地。1939 年日军侵占琼海
+                后，革命力量深入万泉河两岸开展游击战，在塔洋、长坡等地建立抗日民
+                主政权。1942 年反"蚕食"斗争中，琼纵三支队在中原镇伏击日军，毙伤敌
+                寇近百人，极大鼓舞了民众抗日信心。期间，琼海妇女组织"红色娘子军" 运送物资、传递情报，成为革命史上的传奇。</p>
+                <br></br>
+            <img src="网页所用图片/微信图片_20250308210505.jpg" alt="新民路" class="card-image">
+            <br></br>
+           <p> 解放战争阶段，琼海成为琼崖解放区指挥中心。1947 年白沙起义后，
+               琼纵在阳江地区建立五指山中心根据地，琼海成为连接各战略区的枢纽。
+               1949 年渡海战役前夕，琼纵配合主力部队开展"围城打援"，在嘉积、乐会
+               等地展开激烈战斗，为海南岛解放奠定坚实基础。</p>
+               <br></br>
+               <img src="网页所用图片/微信图片_20250308212022.jpg" alt="新民路" class="card-image">
+        </section>
+
+        <section class="history-timeline">
+            <h1 class="section-title">革命斗争时间线</h1>
+            
+            <div class="timeline-item">
+                <h3>1927年 梅子寨战斗</h3>
+                <p>打响琼崖革命第一枪，揭开琼海革命斗争序幕</p >
+            </div>
+
+            <div class="timeline-item">
+                <h3>1939年 抗日根据地建立</h3>
+                <p>日军侵占琼海后，革命力量在万象河两岸开展游击战，建立塔拜、长坡等抗日民主政权</p >
+            </div>
+
+            <div class="timeline-item">
+                <h3>1942年 中原镇伏击战</h3>
+                <p>琼崖三支队在中原镇伏击日军，歼敌近百人，极大鼓舞抗日士气</p >
+            </div>
+
+            <div class="timeline-item">
+                <h3>1947年 白沙起义</h3>
+                <p>建立五指山中心根据地，琼海成为连接各县路区的战略枢纽</p >
+            </div>
+
+            <div class="timeline-item">
+                <h3>1949年 琼海战役</h3>
+                <p>开展"围城打援"战术，在嘉积、乐会等地展开决战，为海南解放奠定基础</p >
+            </div>
+        </section>
+    </div>
+
+
+
+    <footer>
+        
+        <p>联系我们：0898-1234 5678 <br></br> Email:hongmiongyazhou@culture.com</p>
+        <br></br>
+        <p>关于琼海： 红色热土，非遗瑰宝
+            椰风海韵，非遗振兴
+        </p>
+        <br></br>
+        <p>Copyright&copy; 2025 红棉文化. 保留所有权利.</p>
+        
+    </footer>
+<script>
+    // 精确路径匹配函数
+    function isCurrentPage(link) {
+        const currentPath = window.location.pathname.toLowerCase();
+        const linkPath = link.getAttribute('href').trim().toLowerCase();
+    
+        // 处理首页特殊路径
+        if (linkPath === ' ' || linkPath === 'index.html') {
+            return currentPath.endsWith('/') || 
+                   currentPath.includes('index.html') || 
+                   currentPath === '';
+        }
+    
+        return currentPath.includes(linkPath);
+    }
+    
+    // 清除旧状态并设置新状态
+    document.querySelectorAll('nav a').forEach(link => {
+        link.classList.remove('active'); // 先移除所有激活状态
+        
+        if (isCurrentPage(link)) {
+            link.classList.add('active');
+        }
+    });
+    </script>
+</body>
+</html>

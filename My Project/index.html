@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>琼海红色文化网</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 导航 -->
+
+    <nav>
+        <h4>红棉文化</h4>
+        <ul>
+            <li><a href = "index.html" class="active">首页</a></li>
+            <li><a href = "geming.html">革命历史</a></li>
+            <li><a href="jingdian.html">红色景点</a></li>
+            <li><a href="wenchuang.html">文创</a></li>
+            <li><a href="chenjinshi.html">沉浸式体验</a></li>
+        </ul>
+    </nav>
+
+    
+    <!-- <div class="container">
+        <section class="intro-section">
+            <h1>琼海革命历史</h1>
+            <p>琼海革命历史是海南岛革命斗争的重要篇章...</p >
+        </section>
+    </div>
+        <!-- 主要内容 -->
+        <main class="main-container">
+            <!--琼海-->
+            <div class="feature-grid">
+            <article class="qionghai">
+                <img src="网页所用图片/1BD340FD70C6EB33F64E543DC6DC9434.jpg" alt="" class="card1-image">
+                <div class="card-content">
+                    <h2 class="card1-title"></h2>
+                </div>
+            </article>
+            </div>
+            <div class="feature-grid">
+                <!-- 万泉河板块 -->
+                <article class="feature-card">
+                    <img src="网页所用图片/CEB1CA367A6D884EEE26DDDB5245E3E7.jpeg" alt="万泉河" class="card-image">
+                    <div class="card-content">
+                        <h2 class="card-title">万泉河革命遗址</h2>
+                        <p>琼海革命斗争的重要见证地，保留着完整的战壕遗址和革命标语</p>
+                    </div>
+                </article>
+    
+                <!-- 新民路漫谈 -->
+                <article class="feature-card">
+                    <img src="网页所用图片/2EBEAF5DCB455DC7E1F4DDE158C6A4A4.jpg" alt="新民路" class="card-image">
+                    <div class="card-content">
+                        <h2 class="card-title">新民路红色漫谈</h2>
+                        <p>百年骑楼街区的红色记忆，体验革命时期的商贸文化与地下交通站</p>
+                    </div>
+                </article>
+    
+                <!-- 红石街日报 -->
+                <article class="feature-card">
+                    <img src="网页所用图片/74121D6189347AB6DEBCC3429CB5B752.jpg" alt="红石街" class="card-image">
+                    <div class="card-content">
+                        <h2 class="card-title">红石街日报</h2>
+                        <p>收录1940-1950年间珍贵革命报刊，数字化呈现琼崖纵队战地报道</p>
+                    </div>
+                </article>
+            </div>
+        </main>
+    
+    
+
+    <!-- 页脚 -->
+    <footer>
+        
+        <p>联系我们：0898-1234 5678 <br></br> Email:hongmiongyazhou@culture.com</p>
+        <br></br>
+        <p>关于琼海： 红色热土，非遗瑰宝
+            椰风海韵，非遗振兴
+        </p>
+        <br></br>
+        <p>Copyright&copy; 2025 红棉文化. 保留所有权利.</p>
+        
+    </footer>
+<script>
+    // 精确路径匹配函数
+    function isCurrentPage(link) {
+        const currentPath = window.location.pathname.toLowerCase();
+        const linkPath = link.getAttribute('href').trim().toLowerCase();
+    
+        // 处理首页特殊路径
+        if (linkPath === ' ' || linkPath === 'index.html') {
+            return currentPath.endsWith('/') || 
+                   currentPath.includes('index.html') || 
+                   currentPath === '';
+        }
+    
+        return currentPath.includes(linkPath);
+    }
+    
+    // 清除旧状态并设置新状态
+    document.querySelectorAll('nav a').forEach(link => {
+        link.classList.remove('active'); // 先移除所有激活状态
+        
+        if (isCurrentPage(link)) {
+            link.classList.add('active');
+        }
+    });
+    </script>
+</body>
+</html>

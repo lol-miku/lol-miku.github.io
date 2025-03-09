@@ -1,0 +1,118 @@
+<!-- 文创页面 (wenchuang.html) -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>红色文创 - 琼海红色文化网</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <h4>红棉文化</h4>
+        <ul>
+            <li><a href = "index.html" class="active">首页</a></li>
+            <li><a href = "geming.html">革命历史</a></li>
+            <li><a href="jingdian.html">红色景点</a></li>
+            <li><a href="wenchuang.html">文创</a></li>
+            <li><a href="chenjinshi.html">沉浸式体验</a></li>
+        </ul>
+    </nav>
+
+    <<div class="hero-banner">  
+        <img src="网页所用图片/文创顶部图.jpg" alt="红色文化海报">  
+    </div>  
+
+    <div class="container">  
+        <section class="products-showcase">  
+            <h1>革命主题文创</h1>  
+            <div class="product-grid">  
+                <div class="product-card">  
+                    <div class="card-image">
+                        <img src="网页所用图片/6F52D80D-9CBF-4067-8A90-05B51B2D1F49.png" alt="冰箱贴">
+                    </div> 
+                    <h3>冰箱贴</h3>  
+                    
+                    <p>琼海风情，一贴珍藏;</p>
+                    <p> 小小冰箱贴，浓缩琼海美。
+                        </p>
+                        <br></br>
+                    
+                    <button class="buy-btn">立即购买</button>  
+                </div>  
+                <div class="product-card">  
+                    <div class="card-image">
+                        <img src="网页所用图片/F9D3AAF2-E770-49DE-B008-585361D952D8.png" alt="红色玩偶">
+                    </div>  
+                    <h3>红色玩偶</h3>  
+                    <p>“红棉战士”主题玩偶:将革命英
+                        
+                        雄的英勇故事带回家!男女战士形
+                        
+                        象栩栩如生，细节精致，让你感受红色精神的震撼力量。</p>
+                    <button class="buy-btn">立即购买</button>  
+                </div>  
+                <div class="product-card">  
+                    
+                        <img src="网页所用图片/0CCC72FFEE32B4A35EC19DF47ACF9CA4.png" alt="明信片">
+                    
+                    <h3>革命明信片</h3> 
+                    <p>明信片取景于椰子寨大门、</p><p>椰子寨
+                        战斗主题雕塑、红色娘子军纪念馆、
+                        万泉河，重现琼海红色历史。</p>
+                       
+                    <button class="buy-btn">立即购买</button>  
+                </div>  
+                <div class="product-card">  
+            
+                    <img src="网页所用图片/38265CBD-9045-41E6-BABE-BD87DDD9AED6.png" alt="椰雕工艺品">
+                 
+                    <h3>椰雕工艺品</h3>  
+                    <p>椰雕匠心，镌刻红色记忆</p><p>非遗传承，守护琼崖精神</p>
+                    <br></br>
+                    <button class="buy-btn">立即购买</button>  
+                </div>  
+            </div>  
+        </section>  
+    </div>  
+    
+</main>
+
+
+<footer>
+        
+    <p>联系我们：0898-1234 5678 <br></br> Email:hongmiongyazhou@culture.com</p>
+    <br></br>
+    <p>关于琼海： 红色热土，非遗瑰宝
+        椰风海韵，非遗振兴
+    </p>
+    <br></br>
+    <p>Copyright&copy; 2025 红棉文化. 保留所有权利.</p>
+    
+</footer>
+<script>
+    // 精确路径匹配函数
+    function isCurrentPage(link) {
+        const currentPath = window.location.pathname.toLowerCase();
+        const linkPath = link.getAttribute('href').trim().toLowerCase();
+    
+        // 处理首页特殊路径
+        if (linkPath === ' ' || linkPath === 'index.html') {
+            return currentPath.endsWith('/') || 
+                   currentPath.includes('index.html') || 
+                   currentPath === '';
+        }
+    
+        return currentPath.includes(linkPath);
+    }
+    
+    // 清除旧状态并设置新状态
+    document.querySelectorAll('nav a').forEach(link => {
+        link.classList.remove('active'); // 先移除所有激活状态
+        
+        if (isCurrentPage(link)) {
+            link.classList.add('active');
+        }
+    });
+    </script>
+</body>
+</html>
